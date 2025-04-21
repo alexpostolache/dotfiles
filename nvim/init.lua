@@ -1,1 +1,1 @@
-require("alecripo")
+require("config")
