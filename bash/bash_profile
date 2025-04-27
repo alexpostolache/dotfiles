@@ -1,0 +1,9 @@
+source ~/.bashrc
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init.bash 2>/dev/null || :
+
+# Created by `pipx` on 2025-04-21 18:12:21
+export PATH="$PATH:/Users/alecripo/.local/bin"

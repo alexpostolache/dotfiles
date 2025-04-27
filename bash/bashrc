@@ -1,0 +1,21 @@
+source $HOME/.bash_aliases
+git_branch() {
+    branch="$(git branch --show-current 2>/dev/null)"
+    if [ "$branch" ]; then
+        echo -n " (git: $branch) " 
+    fi
+}
+
+exitstatus()
+{
+    if [[ $? == 0 ]]; then
+        echo -n ""
+    else
+        echo -n " (exit code: $?) "
+    fi
+}
+PS1='\u@\h in \w$(exitstatus)$(git_branch)\r\n\\$ '
+export PATH=$HOME/.local/bin:$PATH
+
+# Created by `pipx` on 2025-04-21 18:12:21
+export PATH="$PATH:/Users/alecripo/.local/bin"
